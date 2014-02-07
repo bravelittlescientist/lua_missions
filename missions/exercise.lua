@@ -8,7 +8,15 @@
 ]]
 
 -- INSERT YOUR CODE HERE
+function string.starts_with(self, s)
+    local start_pos, end_pos = 1, #s
+    return s == string.sub(self, start_pos, end_pos)
+end
 
+function string.ends_with(self, s)
+    local start_pos, end_pos = #self - #s + 1, #self
+    return s == string.sub(self, start_pos, end_pos)    
+end
 
 -- END OF CODE INSERT
 
